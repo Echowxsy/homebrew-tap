@@ -15,6 +15,11 @@ class JaNetfilter < Formula
           bash #{libexec}/scripts/install.sh
         For disenable ja-netfilter
           bash #{libexec}/scripts/uninstall.sh
+
+        License code:
+          https://jetbra.in/5d84466e31722979266057664941a71893322460
+        License server:
+          https://jetbra.in
       EOS
     end
   end
