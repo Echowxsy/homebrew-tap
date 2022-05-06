@@ -7,10 +7,16 @@ class JaNetfilter < Formula
   depends_on "openjdk"
   def install
     libexec.install Dir["*"]
-    bin.write_exec_script libexec/"scripts/install.sh"
   end
-  def uninstall
-    bin.write_exec_script libexec/"scripts/uninstall.sh"
+  def caveats
+    on_macos do
+      <<~EOS
+        For enable ja-netfilter
+          bash #{libexec}/scripts/install.sh
+        For disenable ja-netfilter
+          bash #{libexec}/scripts/uninstall.sh
+      EOS
+    end
   end
   test do
     assert_equal "done.", shell_output("#{libexec}/scripts/install.sh").strip
