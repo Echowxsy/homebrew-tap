@@ -4,7 +4,6 @@ cask 'input-source-pro' do
   url "https://inputsource.pro/beta/Input%20Source%20Pro%20#{version}-beta.dmg"
   name 'Input Source Pro'
   desc 'A tool for multi-language users '
-  desc '通过简洁的提示方式，配合输入法自动切换功能，让每一次输入都信心十足。'
   homepage 'https://inputsource.pro'
   app 'Input Source Pro.app'
 end
